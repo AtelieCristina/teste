@@ -305,7 +305,7 @@ footer{background:var(--dark);padding:60px 72px 36px;}
   </div>
   
   <!-- TODAS AS CESTAS (inicialmente oculto) -->
-  <div id="secao-cestas">
+  <div id="secao-cestas" class="sec">
     <div class="sh" style="padding-top:40px;">
       <h2 class="sh-title"><em>Nossas cestas</em></h2>
       <div class="sh-line"></div>
@@ -463,15 +463,15 @@ function pedir(produto){
   window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`);
 }
 </script>
-  <script>
+<script>
 function mostrarTodasCestas() {
-  // Mostra a seção com todas as cestas
-  document.getElementById("secao-cestas").style.display = "block";
+  // Esconde as categorias
+  document.getElementById("cestas").classList.remove("on");
 
-  // Esconde a seção das categorias
-  document.getElementById("cestas").style.display = "none";
+  // Mostra a seção das cestas
+  document.getElementById("secao-cestas").classList.add("on");
 
-  // Rolagem suave até a nova seção
+  // Faz a página rolar suavemente até as cestas
   document.getElementById("secao-cestas").scrollIntoView({
     behavior: "smooth"
   });
