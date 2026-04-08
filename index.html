@@ -465,8 +465,15 @@ function pedir(produto){
 </script>
 <script>
 function mostrarTodasCestas() {
-  document.getElementById("secao-cestas").style.display = "block";
+  const secao = document.getElementById("todas-cestas");
+
+  secao.style.display = "block";
+  secao.style.visibility = "visible";
+  secao.style.opacity = "1";
+
   document.getElementById("cestas").style.display = "none";
+
+  secao.scrollIntoView({ behavior: "smooth" });
 }
 </script>
 </body>
