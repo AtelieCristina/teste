@@ -463,5 +463,19 @@ function pedir(produto){
   window.open(`https://wa.me/${numero}?text=${encodeURIComponent(msg)}`);
 }
 </script>
+  <script>
+function mostrarTodasCestas() {
+  // Mostra a seção com todas as cestas
+  document.getElementById("secao-cestas").style.display = "block";
+
+  // Esconde a seção das categorias
+  document.getElementById("cestas").style.display = "none";
+
+  // Rolagem suave até a nova seção
+  document.getElementById("secao-cestas").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+</script>
 </body>
 </html>
